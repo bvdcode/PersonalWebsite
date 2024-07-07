@@ -1034,6 +1034,7 @@
                             id="name"
                             placeholder="Name*"
                             name="name"
+                            required
                           />
                         </div>
                         <!--/.form-group-->
@@ -1047,6 +1048,7 @@
                             id="email"
                             placeholder="Email*"
                             name="email"
+                            required
                           />
                         </div>
                         <!--/.form-group-->
@@ -1063,6 +1065,7 @@
                             id="subject"
                             placeholder="Subject"
                             name="subject"
+                            required
                           />
                         </div>
                         <!--/.form-group-->
@@ -1078,6 +1081,7 @@
                             rows="8"
                             id="comment"
                             placeholder="Message"
+                            required
                           ></textarea>
                         </div>
                         <!--/.form-group-->
@@ -1089,9 +1093,13 @@
                       <div class="col-sm-12">
                         <div class="h-captcha" data-captcha="true"></div>
                         <div class="single-contact-btn">
-                          <a class="contact-btn" role="button" type="submit"
-                            >SUBMIT</a
+                          <button
+                            class="contact-btn"
+                            role="button"
+                            type="submit"
                           >
+                            SUBMIT
+                          </button>
                         </div>
                         <!--/.single-single-contact-btn-->
                       </div>
