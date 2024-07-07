@@ -1059,29 +1059,13 @@
                     <div class="row">
                       <div class="col-sm-12">
                         <div class="form-group">
-                          <input
-                            type="text"
-                            class="form-control"
-                            id="subject"
-                            placeholder="Subject"
-                            name="subject"
-                            required
-                          />
-                        </div>
-                        <!--/.form-group-->
-                      </div>
-                      <!--/.col-->
-                    </div>
-                    <!--/.row-->
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <div class="form-group">
                           <textarea
                             class="form-control"
                             rows="8"
                             id="comment"
                             placeholder="Message"
                             required
+                            name="message"
                           ></textarea>
                         </div>
                         <!--/.form-group-->
@@ -1091,7 +1075,11 @@
                     <!--/.row-->
                     <div class="row">
                       <div class="col-sm-12">
-                        <div class="h-captcha" data-captcha="true"></div>
+                        <div
+                          class="h-captcha"
+                          data-captcha="true"
+                          style="display: none"
+                        ></div>
                         <div class="single-contact-btn">
                           <button
                             class="contact-btn"
