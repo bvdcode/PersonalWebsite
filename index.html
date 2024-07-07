@@ -199,7 +199,7 @@
                   <div class="col-sm-4">
                     <div class="single-about-add-info">
                       <h3>email</h3>
-                      <p>work@belov.us</p>
+                      <p>job@belov.us</p>
                     </div>
                   </div>
                   <div class="col-sm-4">
@@ -1001,7 +1001,30 @@
             <div class="col-md-offset-1 col-md-5 col-sm-6">
               <div class="single-contact-box">
                 <div class="contact-form">
-                  <form>
+                  <form action="https://api.web3forms.com/submit" method="POST">
+                    <input
+                      type="hidden"
+                      name="access_key"
+                      value="b7a46c4c-836f-4438-9e1f-3dc46b7da4f5"
+                    />
+                    <input
+                      type="hidden"
+                      name="redirect"
+                      value="https://belov.us/success"
+                    />
+                    <input
+                      type="hidden"
+                      name="subject"
+                      value="New Submission from belov.us"
+                    />
+                    <input type="hidden" name="from_name" value="Vadim Belov" />
+                    <input type="hidden" name="replyto" value="job@belov.us" />
+                    <input
+                      type="checkbox"
+                      name="botcheck"
+                      class="hidden"
+                      style="display: none"
+                    />
                     <div class="row">
                       <div class="col-sm-6 col-xs-12">
                         <div class="form-group">
@@ -1064,9 +1087,10 @@
                     <!--/.row-->
                     <div class="row">
                       <div class="col-sm-12">
+                        <div class="h-captcha" data-captcha="true"></div>
                         <div class="single-contact-btn">
-                          <a class="contact-btn" href="#" role="button"
-                            >submit</a
+                          <a class="contact-btn" role="button" type="submit"
+                            >SUBMIT</a
                           >
                         </div>
                         <!--/.single-single-contact-btn-->
@@ -1096,7 +1120,7 @@
                     </div>
                     <div class="single-contact-add-info">
                       <h3>email</h3>
-                      <p>work@belov.us</p>
+                      <p>job@belov.us</p>
                     </div>
                     <div class="single-contact-add-info">
                       <h3>website</h3>
@@ -1203,5 +1227,8 @@
 
     <!--Custom JS-->
     <script src="assets/js/custom.js"></script>
+
+    <!-- Required only if you are using hCaptcha or Advanced File Upload. -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
   </body>
 </html>
