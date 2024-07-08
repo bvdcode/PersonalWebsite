@@ -451,6 +451,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {
         6.  Skills
 --------------------------------------*/
 .skills {
+  padding: 50px 0 100px;
+  border-top: 1px solid #e5ebf2;
 }
 .skill-content {
   padding: 50px 0 80px;
@@ -892,6 +894,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 
 /*hm-foot-icon*/
 .hm-foot-icon {
+  padding: 50px 0;
+  border-top: 1px solid #e5ebf2;
 }
 .hm-foot-icon ul li {
   float: left;
