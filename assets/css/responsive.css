@@ -1,5 +1,5 @@
 @media screen and (max-width: 1680px) {
-} /*max-width:1680px*/
+}
 @media screen and (max-width: 1440px) {
   .single-about-img img {
     max-width: 100%;
@@ -8,7 +8,7 @@
   .about-list-icon {
     width: 100%;
   }
-} /*max-width:1440px*/
+}
 
 @media screen and (max-width: 1199px) {
   nav.navbar.bootsnav ul.nav > li > a {
@@ -61,7 +61,6 @@
   }
   nav.navbar.bootsnav .navbar-toggle {
     display: inline-block;
-    float: right;
     margin-right: 0;
     margin-top: 21px;
   }
@@ -72,7 +71,7 @@
     padding: 15px 0px;
     border: transparent;
   }
-} /*max-width:992px*/
+}
 
 @media screen and (max-width: 991px) {
   .experience-time-responsive {
