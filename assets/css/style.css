@@ -964,3 +964,12 @@ span.single-timeline-horizontal.spacial-horizontal-line {
     bottom: 7px;
   }
 }
+
+.edu-skills {
+  font-size: small;
+  color: #8d8d8d;
+}
+
+.edu-skill {
+  list-style: disc;
+}
