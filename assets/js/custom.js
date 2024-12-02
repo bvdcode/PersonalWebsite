@@ -128,6 +128,18 @@ function submitForm(e) {
     return;
   }
 
+  const submitButton = e.target.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  submitButton.innerText = "Sending...";
+
+  let ipAddress = "Unknown";
+  try {
+    const xmlHttpReq = new XMLHttpRequest();
+    xmlHttpReq.open("GET", "https://api.ipify.org?format=json", false);
+    xmlHttpReq.send(null);
+    ipAddress = JSON.parse(xmlHttpReq.responseText).ip;
+  } catch {}
+
   const formData = {
     access_key: "b7a46c4c-836f-4438-9e1f-3dc46b7da4f5",
     redirect: "https://belov.us/success.html",
@@ -137,14 +149,10 @@ function submitForm(e) {
     name: name,
     email: email,
     message: message,
-    browser_name: navigator.appName,
-    browser_version: navigator.appVersion,
+    browser: navigator.appVersion,
     os: navigator.platform,
+    ipAddress: ipAddress,
   };
-
-  const submitButton = e.target.querySelector('button[type="submit"]');
-  submitButton.disabled = true;
-  submitButton.innerText = "Sending...";
 
   fetch(url, {
     method: "POST",
