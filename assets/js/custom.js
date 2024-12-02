@@ -151,7 +151,7 @@ function submitForm(e) {
     message: message,
     browser: navigator.appVersion,
     os: navigator.platform,
-    ipAddress: ipAddress,
+    ipAddress: "https://2ip.io/whois/?ip=" + ipAddress,
   };
 
   fetch(url, {
