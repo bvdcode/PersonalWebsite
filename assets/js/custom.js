@@ -137,6 +137,9 @@ function submitForm(e) {
     name: name,
     email: email,
     message: message,
+    browser_name: navigator.appName,
+    browser_version: navigator.appVersion,
+    os: navigator.platform,
   };
 
   const submitButton = e.target.querySelector('button[type="submit"]');
