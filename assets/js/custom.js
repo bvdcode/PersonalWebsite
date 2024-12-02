@@ -149,14 +149,21 @@ function submitForm(e) {
     headers: {
       "Content-Type": "application/json",
     },
-  }).then((response) => {
-    if (response.ok) {
-      window.location.href = formData.redirect;
-      return;
-    } else {
-      alert("Failed to submit form: " + response.statusText);
+  })
+    .then((response) => {
+      if (response.ok) {
+        window.location.href = formData.redirect;
+        return;
+      } else {
+        alert("Failed to submit form: " + response.statusText);
+        submitButton.disabled = false;
+        submitButton.innerText = "SUBMIT";
+      }
+    })
+    .catch((error) => {
+      alert("Failed to submit form: " + error);
       submitButton.disabled = false;
       submitButton.innerText = "SUBMIT";
-    }
-  });
+      console.log("error :>> ", error);
+    });
 }
