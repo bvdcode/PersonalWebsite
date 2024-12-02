@@ -106,3 +106,57 @@ $(document).ready(function () {
     $(".header-text a").addClass("animated fadeInDown").css({ opacity: "0" });
   });
 });
+
+function submitForm(e) {
+  e.preventDefault();
+  const url = "https://api.web3forms.com/submit";
+
+  // <input type="text" id="name"
+
+  const nameInput = e.target.querySelector('input[name="name"]');
+  const emailInput = e.target.querySelector('input[name="email"]');
+  const messageInput = e.target.querySelector('textarea[name="message"]');
+
+  const name = nameInput.value;
+  const email = emailInput.value;
+  const message = messageInput.value;
+
+  if (!name || !email || !message) {
+    return;
+  }
+  if (!email.includes("@")) {
+    return;
+  }
+
+  const formData = {
+    access_key: "b7a46c4c-836f-4438-9e1f-3dc46b7da4f5",
+    redirect: "https://belov.us/success.html",
+    subject: "New Submission from belov.us",
+    from_name: "Vadim Belov",
+    replyto: "job@belov.us",
+    name: name,
+    email: email,
+    message: message,
+  };
+
+  const submitButton = e.target.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  submitButton.innerText = "Sending...";
+
+  fetch(url, {
+    method: "POST",
+    body: JSON.stringify(formData),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  }).then((response) => {
+    if (response.ok) {
+      window.location.href = formData.redirect;
+      return;
+    } else {
+      alert("Failed to submit form: " + response.statusText);
+      submitButton.disabled = false;
+      submitButton.innerText = "SUBMIT";
+    }
+  });
+}
