@@ -1082,3 +1082,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
     padding: 20px;
   }
 }
+
+nav.navbar.bootsnav.navbar-fixed {
+  position: relative;
+}
