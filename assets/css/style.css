@@ -974,3 +974,103 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 .edu-skill {
   list-style: disc;
 }
+
+/* auto dark theme */
+
+@media (prefers-color-scheme: dark) {
+  /* color variables */
+
+  html {
+    --accent: #d92cf9;
+    --font-color: #e0e0e0;
+    --bg-color: #292929;
+    --bg-color-light: #474747;
+  }
+
+  /* style overrides */
+  body {
+    color: var(--font-color);
+    background-color: var(--bg-color);
+  }
+
+  nav.navbar.bootsnav.no-background {
+    background-color: var(--bg-color);
+  }
+
+  nav.navbar.bootsnav {
+    background-color: var(--bg-color-light);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--font-color);
+  }
+
+  .single-about-txt h3 {
+    color: var(--font-color);
+  }
+
+  .single-about-txt p {
+    color: var(--font-color);
+  }
+
+  .education {
+    color: var(--font-color);
+    background: var(--bg-color);
+  }
+
+  a {
+    color: var(--font-color);
+  }
+
+  .sticky-wrapper.is-sticky nav.navbar.bootsnav ul.nav > li > a {
+    color: var(--font-color);
+  }
+
+  .experience-time h3 {
+    color: var(--font-color);
+  }
+
+  .timeline-content h5 {
+    color: var(--font-color);
+  }
+
+  .edu-skills {
+    color: var(--font-color);
+  }
+
+  .progress {
+    background: var(--bg-color-light);
+  }
+
+  .contact {
+    background: var(--bg-color);
+  }
+
+  .contact-add-head h3 {
+    color: var(--font-color);
+  }
+
+  .contact-add-head p {
+    color: var(--font-color);
+  }
+
+  .single-contact-add-info h3 {
+    color: var(--font-color);
+  }
+
+  .contact-form .form-control {
+    background: var(--bg-color-light);
+    color: var(--font-color);
+    border-radius: 10px;
+    border: 1px solid var(--font-color);
+  }
+
+  nav.navbar.bootsnav ul.nav > li > a {
+    color: var(--font-color);
+  }
+}
