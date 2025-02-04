@@ -1073,4 +1073,12 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   nav.navbar.bootsnav ul.nav > li > a {
     color: var(--font-color);
   }
+
+  #clients-row {
+    background: var(--bg-color-light);
+    width: 100%;
+    /* добавим свечение сверху и снизу */
+    box-shadow: 0 0 100px var(--bg-color-light);
+    padding: 20px;
+  }
 }
