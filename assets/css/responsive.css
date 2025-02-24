@@ -14,7 +14,9 @@
   }
 
   .welcome-hero {
-    height: 768px;
+    background-position: center;
+    background-size: auto;
+    background: url(../images/about/welcome-banner-m.jpg) no-repeat;
   }
 
   .timeline-content span > i,

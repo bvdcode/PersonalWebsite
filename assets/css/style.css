@@ -237,6 +237,7 @@ nav.navbar.bootsnav .navbar-toggle i {
   background-position: center;
   height: 890px;
 }
+
 .welcome-hero:before {
   position: absolute;
   content: " ";
