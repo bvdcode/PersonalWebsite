@@ -929,8 +929,8 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   font-size: 20px;
   cursor: pointer;
   color: #fff;
-  background: #b636ff;
-  border: 1px solid #b636ff;
+  background: #6b6b6b7c;
+  border: 1px solid #4b4b4b;
   border-radius: 50%;
   -webkit-transition: 0.5s;
   -moz-transition: 0.5s;
@@ -940,7 +940,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   z-index: 2;
 }
 #scroll-Top .return-to-top:hover {
-  background: #fff;
+  filter: invert(1);
   color: #b636ff;
   border: 1px solid #b636ff;
 }
