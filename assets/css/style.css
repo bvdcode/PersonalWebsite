@@ -1101,8 +1101,13 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   .portfolio {
     border: none;
   }
+
   .hm-foot-icon {
     border-top: 1px solid var(--bg-color-light);
+  }
+
+  .hm-foot-icon ul li > a {
+    color: var(--font-color);
   }
 }
 
