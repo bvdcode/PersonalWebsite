@@ -151,8 +151,25 @@
                   <div class="col-sm-4">
                     <div class="single-about-add-info">
                       <h3>phone</h3>
-                      <a class="link" href="tel:+1-858-504-0278"
-                        >(858)-504-0278</a
+                      <a
+                        id="phone"
+                        class="link"
+                        style="cursor: pointer"
+                        onclick="
+                          gtag('event', 'click', {
+                            'event_category': 'phone',
+                            'event_label': btoa(numRef)
+                          });
+                          const el = document.getElementById('phone');
+                          if (el.href) {
+                            return;
+                          }
+                          document.getElementById('phone').innerText = 
+                            atob(numBase64);
+                          document.getElementById('phone').href = atob(numRef);
+                          event.preventDefault(); 
+                          "
+                        >Click to see</a
                       >
                     </div>
                   </div>
@@ -980,9 +997,26 @@
                   <div class="contact-add-info">
                     <div class="single-contact-add-info">
                       <h3>phone</h3>
-                      <a href="tel:+1-858-504-0278" class="link">
-                        (858)-504-0278
-                      </a>
+                      <a
+                        id="phone2"
+                        class="link"
+                        style="cursor: pointer"
+                        onclick="
+                          gtag('event', 'click', {
+                            'event_category': 'phone',
+                            'event_label': btoa(numRef)
+                          });
+                          const el2 = document.getElementById('phone2');
+                          if (el2.href) {
+                            return;
+                          }
+                          document.getElementById('phone2').innerText = 
+                            atob(numBase64);
+                          document.getElementById('phone2').href = atob(numRef);
+                          event.preventDefault(); 
+                          "
+                        >Click to see</a
+                      >
                     </div>
                     <div class="single-contact-add-info">
                       <h3>email</h3>
@@ -1090,6 +1124,8 @@
       }
       gtag("js", new Date());
       gtag("config", "G-B07LTJJM78");
+      const numBase64 = "KDg1OCktNTA0LTAyNzg=";
+      const numRef = "dGVsOisxLTg1OC01MDQtMDI3OA==";
     </script>
   </body>
 </html>
