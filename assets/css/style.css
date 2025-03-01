@@ -1067,7 +1067,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
     background: var(--bg-color-light);
     color: var(--font-color);
     border-radius: 10px;
-    border: 1px solid var(--font-color);
+    border: 1px solid #b536ff79;
   }
 
   nav.navbar.bootsnav ul.nav > li > a {
@@ -1075,11 +1075,34 @@ span.single-timeline-horizontal.spacial-horizontal-line {
   }
 
   #clients-row {
-    background: var(--bg-color-light);
+    background: #2c2c2ca9;
     width: 100%;
     /* добавим свечение сверху и снизу */
-    box-shadow: 0 0 100px var(--bg-color-light);
+    box-shadow: 0 0 100px #3d3d3d;
     padding: 20px;
+  }
+
+  .section-heading h2 {
+    border-bottom: 1px solid var(--bg-color-light);
+  }
+
+  .single-about-txt p {
+    border-bottom: 1px solid var(--bg-color-light);
+  }
+
+  .skills {
+    border-top: 1px solid var(--bg-color-light);
+  }
+
+  .experience {
+    border-top: 1px solid var(--bg-color-light);
+  }
+
+  .portfolio {
+    border: none;
+  }
+  .hm-foot-icon {
+    border-top: 1px solid var(--bg-color-light);
   }
 }
 
