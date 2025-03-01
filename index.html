@@ -1002,17 +1002,18 @@
                         class="link"
                         style="cursor: pointer"
                         onclick="
+                          const id = 'phone2';
                           gtag('event', 'click', {
                             'event_category': 'phone',
                             'event_label': btoa(numRef)
                           });
-                          const el2 = document.getElementById('phone2');
+                          const el2 = document.getElementById(id);
                           if (el2.href) {
                             return;
                           }
-                          document.getElementById('phone2').innerText = 
+                          document.getElementById().innerText = 
                             atob(numBase64);
-                          document.getElementById('phone2').href = atob(numRef);
+                          document.getElementById(id).href = atob(numRef);
                           event.preventDefault(); 
                           "
                         >Click to see</a
