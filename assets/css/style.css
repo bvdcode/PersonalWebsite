@@ -1114,3 +1114,7 @@ span.single-timeline-horizontal.spacial-horizontal-line {
 nav.navbar.bootsnav.navbar-fixed {
   position: relative;
 }
+
+.social-icon:hover {
+  color: var(--accent);
+}
