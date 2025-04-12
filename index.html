@@ -137,10 +137,23 @@
                   deliver software that looks great, runs fast, and solves
                   actual problems.
                 </p>
-
-                <h1>
-                  Design like a user. Build like an engineer. Ship like a
-                  menace.
+                <h1
+                  style="
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 0.4em;
+                    padding-top: 5px;
+                  "
+                >
+                  <span style="display: inline-block; white-space: nowrap"
+                    >Design like a user.</span
+                  >
+                  <span style="display: inline-block; white-space: nowrap"
+                    >Build like an engineer.</span
+                  >
+                  <span style="display: inline-block; white-space: nowrap"
+                    >Ship like a menace.</span
+                  >
                 </h1>
 
                 <div class="row">
@@ -164,6 +177,11 @@
                             atob(numBase64);
                           document.getElementById('phone').href = atob(numRef);
                           event.preventDefault(); 
+                          "
+                        onmouseenter="
+                          document.getElementById('phone').innerText = 
+                            atob(numBase64);
+                          document.getElementById('phone').href = atob(numRef);
                           "
                         >Click to see</a
                       >
@@ -1038,12 +1056,24 @@
                         class="link"
                         style="cursor: pointer"
                         onclick="
-                          const id = 'phone2';
                           gtag('event', 'click', {
                             'event_category': 'phone',
                             'event_label': btoa(numRef)
                           });
-                          const el2 = document.getElementById(id);
+                          const el2 = document.getElementById('phone2');
+                          if (el2.href) {
+                            return;
+                          }
+                          el2.innerText = atob(numBase64);
+                          el2.href = atob(numRef);
+                          event.preventDefault(); 
+                          "
+                        onmouseenter="
+                          gtag('event', 'click', {
+                            'event_category': 'phone',
+                            'event_label': btoa(numRef)
+                          });
+                          const el2 = document.getElementById('phone2');
                           if (el2.href) {
                             return;
                           }
